@@ -7,7 +7,7 @@
     <test name="My TestNG Application">
         <parameter name="lastName" value="Khalturin"/>
         <classes>
-            <class name="com.floud.mytestngapplication.ExampleUnitTest"/>
+            <class name="com.floud.mytestngapplication.UnitClass"/>
         </classes>
     </test> <!-- My TestNG Application -->
 </suite> <!-- Default Suite -->
