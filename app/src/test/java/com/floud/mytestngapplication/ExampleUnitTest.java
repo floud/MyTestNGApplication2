@@ -1,17 +1,51 @@
 package com.floud.mytestngapplication;
 
-import org.junit.Test;
+import org.mockito.Mockito;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
- */
+
 public class ExampleUnitTest {
+
+
+    @BeforeSuite
+    public void setUp() {
+        System.out.println("BeforeSuite call");
+    }
+
     @Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+    public void multiplyIsCorrect() {
+        assertEquals(6, 2 * 3);
+    }
+
+    @Test
+    public void divideIsIncorrect(){
+        assertEquals(9, 19 / 2);
+    }
+
+    @Test
+    public void StringIsIncorrect() {
+        assertNotEquals("Wrong", "Worng");
+    }
+
+    @Parameters("lastName")
+    @Test
+    public void lastNameTestCorrect(String lastName){
+        System.out.println("LastName parametr is: " + lastName);
+        assertEquals("Khalturin",lastName);
+    }
+
+
+    @AfterSuite
+    public void TearDown() {
+        System.out.println("After suite call");
     }
 }
