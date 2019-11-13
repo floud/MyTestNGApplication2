@@ -27,8 +27,8 @@ public class ExampleUnitTest {
     }
 
     @Test
-    public void divideIsIncorrect(){
-        assertEquals(9, 19 / 2);
+    public void divideIsСorrect(){
+        assertEquals(9, 18 / 2);
     }
 
     @Test
