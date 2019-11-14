@@ -24,7 +24,7 @@ public class UnitClass {
     }
 
     @Test
-    public void divideIsСorrect(){
+    public void divideIsCorrect(){
         assertEquals(9, 18 / 2);
     }
 
